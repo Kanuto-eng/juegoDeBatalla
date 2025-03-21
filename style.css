@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barrio&family=Henny+Penny&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: "Henny Penny", system-ui;
     font-weight: 400;
@@ -16,18 +10,46 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    background-color: #000;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-@media (max-width: 768px) {
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
     body {
         background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center top;
         background-attachment: scroll;
+        background-position: center top;
+        min-height: 100vh;
         background-color: #000;
     }
 }
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center top;
+        background-color: #000;
+        min-height: 100vh;
+    }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+    body {
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-color: #000;
+        min-height: 100vh;
+    }
+}
+
 #seleccionar-mascota{
     display: flex;
     flex-direction: column;
