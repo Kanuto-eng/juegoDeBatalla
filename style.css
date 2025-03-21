@@ -7,6 +7,19 @@ body{
     font-style: normal;
     background-image: url(assets/fondo.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-attachment: scroll;
+        background-color: #000; /* por si sobra espacio alrededor */
+    }
 }
 
 #seleccionar-mascota{
