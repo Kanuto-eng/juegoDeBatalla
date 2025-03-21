@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKEPON 🙊🙉🙈</title>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <button id="btn-como-jugar">¿Cómo jugar?</button>
+    <section id="seleccionar-mascota" >
+        <h1 class="titulo">Mokepon! <br>
+            🔥🌊⚡🌪️🌏 </h1>
+
+        <h2 class="subtitulo">Elije tu mascota:</h2>
+        <div class="tarjetas">
+            <label class="tarjetaDeMokepon"  for="kapichu">
+                <p>kapichu</p>
+                <img src="./assets/KAPICHU.png" alt="Kapichu">
+            </label>
+            <input type="radio" name="mascota" id="kapichu">
+
+            <label class="tarjetaDeMokepon"  for="hipodoge">
+                <p>hipodoge</p>
+                <img src="./assets/HIPODOGE.png" alt="hipodoge">
+            </label>
+            <input type="radio" name="mascota" id="hipodoge">
+
+            <label class="tarjetaDeMokepon"  for="capipepo">
+                <p>capipepo</p>
+                <img src="./assets/CAPIPEPO.png" alt="capipepo">
+            </label>
+            <input type="radio" name="mascota" id="capipepo">
+
+            <label class="tarjetaDeMokepon"  for="ratigueya">
+                <p>ratigueya</p>
+                <img src="./assets/RATIGUEYA.png" alt="ratigueya">
+            </label>
+            <input type="radio" name="mascota" id="ratigueya">
+
+            <label class="tarjetaDeMokepon"  for="langostelvis">
+                <p>langostelvis</p>
+                <img src="./assets/LANGOSTELVIS.png" alt="langostelvis">
+            </label>
+            <input type="radio" name="mascota" id="langostelvis">
+
+            <label class="tarjetaDeMokepon"  for="tucupalma">
+                <p>tucupalma</p>
+                <img src="./assets/TUCUPALMA.png" alt="tucupalma">
+            </label>
+            <input type="radio" name="mascota" id="tucupalma">
+
+            <label class="tarjetaDeMokepon"  for="pydos">
+                <p>pydos</p>
+                <img src="./assets/PYDOS.png" alt="pydos">
+            </label>
+            <input type="radio" name="mascota" id="pydos"><br>
+        </div>
+        <button id="btn-seleccionar"> Seleccionar </button>
+
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h2>Elije tu ataque</h2>
+            <div id="marcador-global">
+                <p>Marcador global: <span id="victorias"> 0 </span> victorias y <span id="derrotas"> 0 </span> Derrotas </p>
+            </div>
+            <div class="info-box">
+                <p>Tu mascota <span id="mascota-jugador"></span> tiene <span id="vidaJugador">3</span> vidas </p>
+            </div>
+            <div class="info-box">
+                <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidaEnemigo">3</span> vidas </p>
+            </div>
+
+            <p>
+                <button id="btn-fuego"> Fuego </button>
+                <button id="btn-agua"> Agua </button>
+                <button id="btn-trueno"> Trueno </button>
+                <button id="btn-aire"> Aire </button>
+                <button id="btn-tierra"> Tierra </button>
+            </p>
+
+    </section><br>
+    <div class="contenedor-mensajes">
+        <h2 id="hMensajes">Mensajes</h2>
+        <section id="mensajes" class="caja-mensajes"></section>
+    </div>
+    <section id="reiniciar">
+        <button id="btn-reiniciar">Reiniciar Juego</button>
+        <button onclick="resetearContador()">Resetear Contador</button>
+    </section>
+<!-- Modal Cómo Jugar -->
+    <div id="modal-como-jugar">
+        <div class="contenido">
+            <h2>¿Cómo jugar?</h2>
+                <p>
+                    ✅ <strong>1. Elige tu mascota favorita</strong> 🐾 para entrar en batalla.<br><br>
+                    ✅ <strong>2. Selecciona tu ataque:</strong> <br>  
+                    &nbsp;&nbsp;🔥 Fuego | 🌊 Agua | ⚡ Trueno | 🌪️ Aire | 🌏 Tierra <br><br>
+                    ✅ <strong>3. Ataca con estrategia:</strong> cada tipo tiene fortalezas y debilidades. 🤔<br><br>
+                    ✅ <strong>4. Por cada ronda:</strong> <br>
+                    &nbsp;&nbsp;💥 Si tu ataque es más fuerte → ¡le quitas una vida al enemigo!<br>
+                    &nbsp;&nbsp;💔 Si es más débil → pierdes una vida tú.<br><br>  
+                    ✅ <strong>5. El ganador es quien deja sin vidas al oponente.</strong> 🏆<br><br>
+                    ✅ <strong>6. ¡Suma victorias, reinicia cuando quieras y sigue jugando para convertirte en el campeón definitivo!</strong> 🎮🎉<br><br>
+                    ✅ <strong> RECUERDA:<br><br>
+                    Fuego vence a tierra, Agua vence a fuego  <br><br>
+                    Trueno vence a agua ,  Aire vence a trueno<br><br>
+                    Tierra vence a aire</strong><br><br>
+                </p>
+                <button id="btn-cerrar-modal">Cerrar</button>
+        </div>
+    </div>
+</body>
+</html>
